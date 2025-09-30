@@ -1,0 +1,32 @@
+body {
+    background-color: #4d8cc4;
+    align-items: center;
+}
+
+section{
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 20%;
+}
+
+nav {
+    display: inline-block;
+}
+
+.tarjeta_superior {
+    border-radius: 35%;
+
+}
+
+#tarjeta_izq {
+    margin-left: 5em;
+}
+
+#tarjeta_der {
+    margin-right: 5em;
+}
+
+#tarjeta_centro {
+    margin-left: 3em;
+    margin-right: 3em;
+}

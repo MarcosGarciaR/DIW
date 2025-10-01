@@ -1,5 +1,5 @@
 body {
-    background-color: #4d8cc4;
+     background-color: #4d8cc4;
     align-items: center;
 }
 
@@ -11,11 +11,30 @@ section{
 
 nav {
     display: inline-block;
+    background-color: white;
+}
+
+.marcaje{
+    font-size: small;
+    background-color: red;
+    border-style: ridge;
+    rotate: 315deg;
+    position: absolute;
+    size: 0.2em;
 }
 
 .tarjeta_superior {
-    border-radius: 35%;
+    border-radius: 50%;
+    border-style: double;
+    width: 40%;
+    height: 4em;
+    position: relative;
+    text-align: center;
+    align-content: center; /*Alinea el texto al medio del circulo (altura)*/
+}
 
+#boton_basic{
+    border-radius: 50%;
 }
 
 #tarjeta_izq {
@@ -29,4 +48,5 @@ nav {
 #tarjeta_centro {
     margin-left: 3em;
     margin-right: 3em;
+
 }

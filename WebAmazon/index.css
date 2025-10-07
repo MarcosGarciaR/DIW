@@ -1,0 +1,48 @@
+body{
+    border: 3px;
+    border-color: black;
+    display: flex;
+}
+
+#carruselImagenes{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 2%;
+    padding: 2% 2%;
+}
+
+#carruselImagenes img{
+    width: 100%;
+    padding: 30%;
+    justify-content: flex-start;
+    margin-top: 10%;
+}
+.bordeImagenes{
+    border: 1px;
+    border-style: solid;
+    
+}
+
+#imagenCentral{
+    padding: 2%;
+    flex-basis: 50%;
+}
+
+#imagenCentral img{
+    width: 100%;
+}
+#texto{
+    padding: 2%;
+    flex: 1 1 45%;
+    margin-right: 3%;
+}
+
+#oferta{
+    background-color: red;
+    font-size: 2em;
+    border-radius: 15%;
+    color: white; 
+    padding: 1%;
+
+}
+

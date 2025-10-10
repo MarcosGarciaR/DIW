@@ -1,48 +1,83 @@
-body{
-    border: 3px;
-    border-color: black;
+body {
     display: flex;
+    flex-wrap: wrap;
 }
 
-#carruselImagenes{
+#carruselImagenes {
     display: flex;
     flex-direction: column;
-    flex-basis: 2%;
-    padding: 2% 2%;
+    flex-basis: 3%;
+    padding-top: 2%;
 }
 
-#carruselImagenes img{
+#carruselImagenes img {
     width: 100%;
-    padding: 30%;
+    min-width: 30px;
+    max-width: 100px;
+    padding: 5%;
     justify-content: flex-start;
     margin-top: 10%;
 }
-.bordeImagenes{
+
+.bordeImagenes {
     border: 1px;
     border-style: solid;
-    
 }
 
-#imagenCentral{
+#imagenCentral {
     padding: 2%;
-    flex-basis: 50%;
+    flex: 1 1 30%;
 }
 
-#imagenCentral img{
-    width: 100%;
+#imagenCentral img {
+    min-width: 400px;
+    max-width: fit-content;
 }
-#texto{
+
+#texto {
     padding: 2%;
-    flex: 1 1 45%;
+    flex: 1 1 40%;
     margin-right: 3%;
 }
 
-#oferta{
-    background-color: red;
-    font-size: 2em;
-    border-radius: 15%;
-    color: white; 
+.enlaces {
+    color: cornflowerblue;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#campoOferta {
+    display: flex;
+    align-items: center;
+}
+
+#oferta {
+    background-color: rgb(219, 1, 1);
+    color: white;
     padding: 1%;
+    width: fit-content;
+    height: fit-content;
 
 }
 
+#campoOferta i {
+    margin-left: 2%;
+}
+
+@media (max-width: 800px) {
+    #carruselImagenes {
+        flex-direction: row;
+        align-items: center;
+        margin-left: 2%;
+        width: 100%;
+    }
+
+    #carruselImagenes img {
+        width: 100%;
+    }
+
+    #imagenCentral img {
+        width: 5%;
+    }
+
+}

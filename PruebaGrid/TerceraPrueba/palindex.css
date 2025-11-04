@@ -1,0 +1,41 @@
+body{
+    background-color: rebeccapurple;
+}
+
+#columnas{
+    display: grid;
+    background-color: red;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    border: 2px;
+    border-style: solid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2% 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#columnas div{
+    border: 2px;
+    border-style: solid;
+    height: 400px;
+    background-color: white;
+}
+
+.divImagen{
+    width: auto;
+    max-width: 100%;
+    min-width: 50em;
+    background-repeat: no-repeat;
+}
+
+div p{
+    text-align: end;
+    padding-right: 3%;
+}
+
+div h1{
+    text-align: center;
+}

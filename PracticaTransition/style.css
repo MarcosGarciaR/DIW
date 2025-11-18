@@ -1,0 +1,32 @@
+#general{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+}
+
+div{
+    background-color: aqua;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    filter:grayscale(80%);
+}
+
+p{
+    opacity: 0;
+}
+
+img:hover{
+
+    filter: none;
+    transform: scale(1.15);
+    transition:  1s;
+
+}

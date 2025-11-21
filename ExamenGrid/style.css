@@ -1,0 +1,105 @@
+/* EJERCICIO 1*/
+.layout-container{
+    display: grid;
+    grid-template-columns: 250px 1fr ;
+    grid-template-rows: 5% 100vh 5%;
+    border: 3px;
+
+    border-style: solid;
+}
+
+.header{
+    background-color: yellow;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    align-content: center;
+    font-weight: bold;
+}
+
+.sidebar{
+    background-color: gainsboro;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.main-content{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.footer{
+    background-color: rgb(51, 51, 51);
+    color: white;
+    text-align: center;
+    align-content: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.header, h3, p{
+    padding-left: 5%;
+}
+
+ul{
+    padding-left: 7%;
+}
+/* EJERCICIO 2*/
+.gallery-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1%;
+}
+
+.card{
+    height: auto;
+    border: 1px;
+    border-color: lightgray;
+    border-style: solid;
+    padding: 3% 3%;
+    margin-top: 1%;
+}
+
+.card-img{
+    background-color: grey;
+    text-align: center;
+    align-content: center;
+    height: 100px;
+    border-radius: 5%;
+}
+
+
+
+/* EJERCICIO 3*/
+.form-container{
+    width: 25%;
+    display: grid;
+    background-color: lightgray;
+    grid-gap: 5%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    border-radius: 3%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-left: 25%;
+}
+
+.form-title{
+    text-align: center;
+    grid-column: span 2;
+}
+
+input{
+    grid-column: 1 span 2;
+    border-radius: 5%;
+}
+
+.full-width, .btn-submit{
+    grid-column: span 2;
+    border-radius: 5%;
+}
+
+.btn-submit{
+    background-color: rgb(0, 47, 255);
+    color: white;
+    border-radius: 5%;
+    border-width: 1%;
+}

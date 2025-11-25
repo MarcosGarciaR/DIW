@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audios</title>
+</head>
+<body>
+    <div class="main">
+        <h2>Buscador de música (iTunes API)</h2>
+
+        <input type="text" id="searchInput" placeholder="Escribe un artista o canción">
+        <button id="searchBtn">Buscar</button>
+
+        <ul id="results"></ul>
+    </div>
+    <footer>
+        <p>Datos obtenidos de la API pública de iTunes.</p>
+    </footer>
+    <script>
+        document.getElementById("searchBtn").addEventListener("click", function () {
+            const query = document.getElementById("searchInput").value.trim();
+            const resultsList = document.getElementById("results");
+            resultsList.innerHTML = ""; // Limpiar resultados anteriores
+
+            if (!query) {
+                resultsList.innerHTML = "<li>Escribe algo para buscar.</li>";
+                return;
+            }
+
+            const url = `https://itunes.apple.com/search?term=${encodeURIComponent(query)}&entity=song&limit=10`;
+            fetch(url)
+                .then(res => res.json())
+                .then(data => {
+                    if (data.results.length === 0) {
+                        resultsList.innerHTML = "<li>No se encontraron resultados.</li>";
+                        return;
+                    }
+                    let contador = 1;
+                    data.results.forEach(item => {
+                        const audioID = "audio"+contador;
+                        const botonID = "boton"+contador;
+                        const li = document.createElement("li");
+                        li.innerHTML = `
+                        <button id="${botonID}" onclick="playPause('${audioID}', '${botonID}')">Play</button>
+            <strong>${item.trackName}</strong> — ${item.artistName}
+            <br>
+            <audio id="${audioID}" controls src="${item.previewUrl}"></audio>`
+                        resultsList.appendChild(li);
+                        contador+= 1;
+                    });
+                })
+                .catch(err => {
+                    resultsList.innerHTML = "<li>Error al buscar datos.</li>";
+                    console.error(err);
+                });
+                
+        });
+            function playPause(esteID, buttonID){
+                    const miAudio = document.getElementById(esteID);
+                    const miBoton = document.getElementById(buttonID);
+
+                    if(miAudio.paused){
+                        miAudio.play()
+                        miBoton.innerText="Pause";
+                    }else{
+                        miAudio.pause()
+                        miBoton.innerText="Play";
+                    }
+            }
+    </script>
+</body>
+</html>
